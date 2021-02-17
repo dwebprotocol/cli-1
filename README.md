@@ -1,6 +1,6 @@
 ![./logo.png](./logo.png)
 
-# Hyp
+# dHub CLI
 
 <p>[
   <a href="https://www.youtube.com/watch?v=SVk1uIQxOO8" target="_blank">Demo Video</a> |
@@ -10,7 +10,7 @@
   <a href="https://hypercore-protocol.org/guides/hyp/">Website</a>
 ]</p>
 
-A CLI for peer-to-peer file sharing (and more) using the [Hypercore Protocol](https://hypercore-protocol.org).
+A CLI for peer-to-peer file sharing (and more) using the [dWeb Protocol Suite](https://dwebx.org).
 
 <a href="https://www.youtube.com/watch?v=SVk1uIQxOO8" target="_blank">📺 Watch The Demo Video</a>
 
@@ -19,7 +19,7 @@ A CLI for peer-to-peer file sharing (and more) using the [Hypercore Protocol](ht
 Requires nodejs 14+
 
 ```
-npm install -g @hyperspace/cli
+npm install -g @dhub/cli
 ```
 
 ## Usage
@@ -27,93 +27,93 @@ npm install -g @hyperspace/cli
 Command overview:
 
 ```bash
-Usage: hyp <command> [opts...]
+Usage: dweb <command> [opts...]
 
 General Commands:
 
-  hyp info [urls...] - Show information about one (or more) hypers.
-  hyp seed {urls...} - Download and make hyper data available to the network.
-  hyp unseed {urls...} - Stop making hyper data available to the network.
-  hyp create {drive|bee} - Create a new hyperdrive or hyperbee.
+  dweb info [urls...] - Show information about one (or more) hubs.
+  dweb seed {urls...} - Download and make dweb data available to the network.
+  dweb unseed {urls...} - Stop making dweb data available to the network.
+  dweb create {drive|tree} - Create a new ddrive or dwebtree.
 
-  hyp beam {pass_phrase} - Send a stream of data over the network.
+  dweb cast {pass_phrase} - Send a stream of data over the network.
 
-Hyperdrive Commands:
+dDrive Commands:
 
-  hyp drive ls {url} - List the entries of the given hyperdrive URL.
-  hyp drive mkdir {url} - Create a new directory at the given hyperdrive URL.
-  hyp drive rmdir {url} - Remove a directory at the given hyperdrive URL.
+  dweb drive ls {url} - List the entries of the given dDrive URL.
+  dweb drive mkdir {url} - Create a new directory at the given dDrive URL.
+  dweb drive rmdir {url} - Remove a directory at the given dDrive URL.
 
-  hyp drive cat {url} - Output the content of the given hyperdrive URL.
-  hyp drive put {url} [content] - Write a file at the given hyperdrive URL.
-  hyp drive rm {url} - Remove a file or (if --recursive) a folder at the given hyperdrive URL.
+  dweb drive cat {url} - Output the content of the given dDrive URL.
+  dweb drive put {url} [content] - Write a file at the given dDrive URL.
+  dweb drive rm {url} - Remove a file or (if --recursive) a folder at the given dDrive URL.
 
-  hyp drive diff {source_path_or_url} {target_path_or_url} - Compare two folders in your local filesystem or in hyperdrives. Can optionally "commit" the difference.
-  hyp drive sync {source_path_or_url} [target_path_or_url] - Continuously sync changes between two folders in your local filesystem or in hyperdrives.
+  dweb drive diff {source_path_or_url} {target_path_or_url} - Compare two folders in your local filesystem or in dDrives. Can optionally "commit" the difference.
+  dweb drive sync {source_path_or_url} [target_path_or_url] - Continuously sync changes between two folders in your local filesystem or in dDrives.
 
-  hyp drive http {url} - Host a hyperdrive as using HTTP on the localhost.
+  dweb drive http {url} - Host a dDrive as using HTTP on the localhost.
 
-Hyperbee Commands:
+dWebTree Commands:
 
-  hyp bee ls {url} - List the entries of the given hyperbee URL.
-  hyp bee get {url} - Get the value of an entry of the given hyperbee URL.
-  hyp bee put {url} [value] - Set the value of an entry of the given hyperbee URL.
-  hyp bee del {url} - Delete an entry of the given hyperbee URL.
+  dweb tree ls {url} - List the entries of the given dWebTree URL.
+  dweb tree get {url} - Get the value of an entry of the given dWebTree URL.
+  dweb tree put {url} [value] - Set the value of an entry of the given dWebTree URL.
+  dweb tree del {url} - Delete an entry of the given dWebTree URL.
 
 Daemon Commands:
 
-  hyp daemon status - Check the status of the hyperspace daemon.
-  hyp daemon start - Start the hyperspace daemon.
-  hyp daemon stop - Stop the hyperspace and mirroring daemons if active.
+  dweb daemon status - Check the status of the dHub daemon.
+  dweb daemon start - Start the dHub daemon.
+  dweb daemon stop - Stop the dHub and mirroring daemons if active.
 
 Aliases:
 
-  hyp sync -> hyp drive sync
-  hyp diff -> hyp drive diff
-  hyp ls -> hyp drive ls
-  hyp cat -> hyp drive cat
-  hyp put -> hyp drive put
+  dweb sync -> dweb drive sync
+  dweb diff -> dweb drive diff
+  dweb ls -> dweb drive ls
+  dweb cat -> dweb drive cat
+  dweb put -> dweb drive put
 ```
 
 ## Overview
 
-The [Hypercore Protocol](https://hypercore-protocol.org) is a peer-to-peer network for sharing files and data. This command-line provides a convenient set of tools for accessing the network.
+The [dWeb Protocol Suite](https://dwebx.org) is a peer-to-peer network for sharing files and data. This command-line provides a convenient set of tools for accessing the network.
 
-There are two common kinds of "Hypercores":
+There are two common kinds of "dDatabases":
 
-- **Hyperdrive** A folder containing files.
-- **Hyperbee** A key-value database (similar to leveldb).
+- **dDrive** A folder containing files.
+- **dWebTree** A key-value database (similar to leveldb).
 
-All data has a URL which starts with `hyper://`. A URL will look like this:
-
-```
-hyper://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/
-```
-
-You use these URLs to access the hyper data over the peer-to-peer network. For example:
+All data has a URL which starts with `dweb://`. A URL will look like this:
 
 ```
-hyp ls hyper://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/
-hyp cat hyper://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/file.txt
-cat diagram.png | hyp put 515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/diagram.png
+dweb://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/
 ```
 
-You can create a new hyperdrive or hyperbee using the `create` commands:
+You use these URLs to access the dweb data over the peer-to-peer network. For example:
 
 ```
-hyp create drive
+dweb ls dweb://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/
+dweb cat dweb://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/file.txt
+cat diagram.png | dweb put 515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/diagram.png
+```
+
+You can create a new ddrive or dwebtree using the `create` commands:
+
+```
+dweb create drive
 ```
 
 You can then seed the hyper (or seed a hyper created by somebody else) using the `seed` command:
 
 ```
-hyp seed hyper://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/
+dweb seed dweb://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/
 ```
 
-To see what hypers you are currently seeding, run `info`:
+To see what hubs you are currently seeding, run `info`:
 
 ```
-hyp info
+dweb info
 ```
 
 ## Documentation
