@@ -7,7 +7,7 @@
   <a href="#installation">Installation</a> |
   <a href="#usage">Usage</a> |
   <a href="#overview">Overview</a> |
-  <a href="https://hypercore-protocol.org/guides/hyp/">Website</a>
+  <a href="https://docs.dwebx.org/">Website</a>
 ]</p>
 
 A CLI for peer-to-peer file sharing (and more) using the [dWeb Protocol Suite](https://dwebx.org).
@@ -104,7 +104,7 @@ You can create a new ddrive or dwebtree using the `create` commands:
 dweb create drive
 ```
 
-You can then seed the hyper (or seed a hyper created by somebody else) using the `seed` command:
+You can then seed the hub (or seed a hub created by somebody else) using the `seed` command:
 
 ```
 dweb seed dweb://515bbbc1db2139ef27b6c45dfa418c8be6a1dec16823ea7cb9e61af8d060049e/
@@ -116,11 +116,3 @@ To see what hubs you are currently seeding, run `info`:
 dweb info
 ```
 
-## Documentation
-
-The [website documentation](https://hypercore-protocol.org/guides/hyp/) have a lot of useful guides:
-
-- [Full Commands Reference](https://hypercore-protocol.org/guides/hyp/commands/)
-- [Guide: Sharing Folders](https://hypercore-protocol.org/guides/hyp/sharing-folders/)
-- [Guide: Seeding Data](https://hypercore-protocol.org/guides/hyp/seeding-data/)
-- [Guide: Beaming Files](https://hypercore-protocol.org/guides/hyp/beaming-files/)
