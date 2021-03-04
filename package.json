@@ -1,32 +1,33 @@
 {
-  "name": "@hyperspace/cli",
+  "name": "@dhub/cli",
   "type": "module",
-  "version": "1.5.0",
-  "description": "A CLI for the hyper:// space network.",
+  "version": "1.0.0",
+  "description": "A CLI for managing dDatabases, dTrees and dDrives on the dWeb.",
   "bin": {
-    "hyp": "./bin/hyp.js"
+    "dweb": "./bin/dweb.js"
   },
   "scripts": {
-    "start": "node ./bin/hyp",
+    "start": "node ./bin/dweb",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hypercore-protocol/hypercore-cli.git"
+    "url": "git+https://github.com/dwebprotocol/dhub-cli.git"
   },
   "keywords": [
-    "beaker",
+    "dbrowser",
+    "dweb",
     "cli"
   ],
   "author": "Blue Link Labs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hypercore-protocol/hypercore-cli/issues"
+    "url": "https://github.com/dwebprotocol/dhub-cli/issues"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "homepage": "https://github.com/hypercore-protocol/hypercore-cli#readme",
+  "homepage": "https://dwebx.org",
   "dependencies": {
     "ansi-diff-stream": "^1.2.1",
     "await-lock": "^2.1.0",
@@ -36,11 +37,11 @@
     "chokidar": "^3.4.3",
     "concat-stream": "^2.0.0",
     "diff-file-tree": "^2.5.1",
-    "hyperbeam": "^1.1.1",
-    "hyperbee": "^1.0.1",
-    "hyperdrive": "^10.18.0",
-    "hyperspace": "^3.17.0",
-    "hyperspace-mirroring-service": "^1.0.0",
+    "dcast": "^1.0.0",
+    "dwebtree": "^1.0.0",
+    "ddrive": "^1.0.0",
+    "dhub": "^1.0.0",
+    "@dhub/mirroring-service": "^1.0.0",
     "identify-filetype": "^1.0.0",
     "mime": "^1.4.0",
     "mkdirp": "^1.0.4",
