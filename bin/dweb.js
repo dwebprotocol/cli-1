@@ -1,20 +1,20 @@
 #!/usr/bin/env node
 
 
-process.title = "hyp"
+process.title = "dweb"
 
 import subcommand from 'subcommand'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
-import * as hyper from '../lib/hyper/index.js'
+import * as dweb from '../lib/dweb/index.js'
 
 import info from '../lib/commands/info.js'
 import create from '../lib/commands/create.js'
 import seed from '../lib/commands/seed.js'
 import unseed from '../lib/commands/unseed.js'
-import beam from '../lib/commands/beam.js'
+import cast from '../lib/commands/cast.js'
 
 import driveLs from '../lib/commands/drive/ls.js'
 import driveCat from '../lib/commands/drive/cat.js'
@@ -26,10 +26,10 @@ import driveDiff from '../lib/commands/drive/diff.js'
 import driveSync from '../lib/commands/drive/sync.js'
 import driveHttp from '../lib/commands/drive/http.js'
 
-import beeLs from '../lib/commands/bee/ls.js'
-import beeGet from '../lib/commands/bee/get.js'
-import beePut from '../lib/commands/bee/put.js'
-import beeDel from '../lib/commands/bee/del.js'
+import dtreeLs from '../lib/commands/dtree/ls.js'
+import dtreeGet from '../lib/commands/dtree/get.js'
+import dtreePut from '../lib/commands/dtree/put.js'
+import dtreeDel from '../lib/commands/dtree/del.js'
 
 import daemonStatus from '../lib/commands/daemon/status.js'
 import daemonStart from '../lib/commands/daemon/start.js'
@@ -45,7 +45,7 @@ const commands = {
   seed,
   unseed,
   create,
-  beam,
+  cast,
 
   driveLs,
   driveCat,
@@ -57,10 +57,10 @@ const commands = {
   driveSync,
   driveHttp,
 
-  beeLs,
-  beeGet,
-  beePut,
-  beeDel,
+  dtreeLs,
+  dtreeGet,
+  dtreePut,
+  dtreeDel,
 
   daemonStatus,
   daemonStart,
@@ -102,8 +102,8 @@ function wrapCommand (obj) {
     }
 
     try {
-      if (!obj.name.startsWith('daemon') && obj.name !== 'beam') {
-        await hyper.setup()
+      if (!obj.name.startsWith('daemon') && obj.name !== 'cast') {
+        await dweb.setup()
       }
       await innerCommand(...args)
     } catch (err) {

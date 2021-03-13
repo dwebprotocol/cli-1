@@ -1,5 +1,5 @@
-# Creating a hyperdrive
+# Creating a ddrive
 
 This doc was moved to the website:
 
-https://hypercore-protocol.org/guides/hyp/commands/create/
+https://hypercore-protocol.org/guides/dweb/commands/create/

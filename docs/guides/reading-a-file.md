@@ -1,5 +1,5 @@
-# Reading a file from a hyperdrive
+# Reading a file from a ddrive
 
 This doc was moved to the website:
 
-https://hypercore-protocol.org/guides/hyp/commands/drive-cat/
+https://hypercore-protocol.org/guides/dweb/commands/drive-cat/

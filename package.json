@@ -39,7 +39,7 @@
     "diff-file-tree": "^2.5.1",
     "dcast": "^1.0.0",
     "dwebtree": "^1.0.0",
-    "ddrive": "^1.0.0",
+    "ddrive": "^5.0.0",
     "dhub": "^1.0.0",
     "@dhub/mirroring-service": "^1.0.0",
     "identify-filetype": "^1.0.0",

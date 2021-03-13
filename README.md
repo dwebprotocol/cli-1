@@ -32,11 +32,11 @@ Usage: dweb <command> [opts...]
 General Commands:
 
   dweb info [urls...] - Show information about one (or more) hubs.
-  dweb seed {urls...} - Download and make dweb data available to the network.
-  dweb unseed {urls...} - Stop making dweb data available to the network.
+  dweb seed {urls...} - Download and make dweb data available to the dWeb.
+  dweb unseed {urls...} - Stop making dweb data available to the dWeb.
   dweb create {drive|tree} - Create a new ddrive or dwebtree.
 
-  dweb cast {pass_phrase} - Send a stream of data over the network.
+  dweb cast {pass_phrase} - Send a stream of data over the dWeb.
 
 dDrive Commands:
 
@@ -77,7 +77,7 @@ Aliases:
 
 ## Overview
 
-The [dWeb Protocol Suite](https://dwebx.org) is a peer-to-peer network for sharing files and data. This command-line provides a convenient set of tools for accessing the network.
+The [dWeb Protocol Suite](https://dwebx.org) is a peer-to-peer network for sharing files and data. This command-line provides a convenient set of tools for accessing the dWeb.
 
 There are two common kinds of "dDatabases":
 

@@ -1,5 +1,5 @@
-# Writing an individual file to hyperdrive
+# Writing an individual file to ddrive
 
 This doc was moved to the website:
 
-https://hypercore-protocol.org/guides/hyp/commands/drive-put/
+https://hypercore-protocol.org/guides/dweb/commands/drive-put/

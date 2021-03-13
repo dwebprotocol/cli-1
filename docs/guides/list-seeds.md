@@ -2,4 +2,4 @@
 
 This doc was moved to the website:
 
-https://hypercore-protocol.org/guides/hyp/seeding-data/
+https://hypercore-protocol.org/guides/dweb/seeding-data/

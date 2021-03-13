@@ -2,4 +2,4 @@
 
 This doc was moved to the website:
 
-https://hypercore-protocol.org/guides/hyp/commands/drive-diff/
+https://hypercore-protocol.org/guides/dweb/commands/drive-diff/
