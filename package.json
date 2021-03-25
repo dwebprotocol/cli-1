@@ -1,7 +1,7 @@
 {
   "name": "@dhub/cli",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI for managing dDatabases, dTrees and dDrives on the dWeb.",
   "bin": {
     "dweb": "./bin/dweb.js"
@@ -19,7 +19,7 @@
     "dweb",
     "cli"
   ],
-  "author": "Blue Link Labs",
+  "author": "PeepsLabs <peepslabs@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dwebprotocol/dhub-cli/issues"
@@ -41,7 +41,7 @@
     "dwebtree": "^1.0.0",
     "ddrive": "^5.0.0",
     "dhub": "^1.0.0",
-    "@dhub/mirroring-service": "^1.0.0",
+    "dhub-mirroring-service": "^1.0.0",
     "identify-filetype": "^1.0.0",
     "mime": "^1.4.0",
     "mkdirp": "^1.0.4",
