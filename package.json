@@ -1,7 +1,7 @@
 {
   "name": "@dhub/cli",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI for managing dDatabases, dTrees and dDrives on the dWeb.",
   "bin": {
     "dweb": "./bin/dweb.js"
@@ -37,11 +37,11 @@
     "chokidar": "^3.4.3",
     "concat-stream": "^2.0.0",
     "diff-file-tree": "^2.5.1",
-    "dcast": "^1.0.0",
-    "dwebtree": "^1.0.0",
-    "ddrive": "^5.0.0",
-    "dhub": "^1.0.0",
-    "dhub-mirroring-service": "^1.0.0",
+    "dcast": "^1.0.1",
+    "dwebtree": "^1.0.1",
+    "ddrive": "^5.0.2",
+    "dhub": "^1.0.6",
+    "dhub-mirroring-service": "^1.0.3",
     "identify-filetype": "^1.0.0",
     "mime": "^1.4.0",
     "mkdirp": "^1.0.4",
