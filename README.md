@@ -1,9 +1,7 @@
-![./logo.png](./logo.png)
 
 # dHub CLI
 
 <p>[
-  <a href="https://www.youtube.com/watch?v=SVk1uIQxOO8" target="_blank">Demo Video</a> |
   <a href="#installation">Installation</a> |
   <a href="#usage">Usage</a> |
   <a href="#overview">Overview</a> |
@@ -11,8 +9,6 @@
 ]</p>
 
 A CLI for peer-to-peer file sharing (and more) using the [dWeb Protocol Suite](https://dwebx.org).
-
-<a href="https://www.youtube.com/watch?v=SVk1uIQxOO8" target="_blank">📺 Watch The Demo Video</a>
 
 ## Installation
 
